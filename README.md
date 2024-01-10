@@ -33,7 +33,9 @@ Identifying a customers risk of churn is paramount for any business since it ena
 * **Churn Label**: If the customer churned or not (Yes or No)
 
 **Data Processing**
-WA_Fn-UseC_-Telco-Customer-Churn.csv was 
+WA_Fn-UseC_-Telco-Customer-Churn.csv was imported into a commonly available database system, google docs.
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/39cb6c60-82a0-431f-9283-b4ba9234dbd7)
+
 
 **Bibliography**:
 Reicheld, F. and Schefter, P. (2000) E-loyalty: Your secret weapon on the web, Harvard Business Review. Available at: https://hbr.org/2000/07/e-loyalty-your-secret-weapon-on-the-web (Accessed: 10 January 2024). 
