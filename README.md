@@ -12,7 +12,7 @@ Identifying a customers risk of churn is paramount for any business since it ena
 **Data Overview**:
 
 **Dataset Features**
-* **customerID**: A unique number that represents an inidividual customer.
+* **customerID**: A unique ID that represents an inidividual customer.
 * **gender**: If the customer is either male or female (option limited)
 * **Senior Citizen**: If the customer is a elderly or not (1,0)
 * **Partner**: If the customer has a marital or an established relationship (Yes, No)
@@ -35,6 +35,16 @@ Identifying a customers risk of churn is paramount for any business since it ena
 **Data Processing**
 WA_Fn-UseC_-Telco-Customer-Churn.csv was imported into a commonly available database system, google docs.
 ![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/39cb6c60-82a0-431f-9283-b4ba9234dbd7)
+
+The above .csv was then formatted into a brief table to spot for incosnsitencies and to explore the scope of the dataset.
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/7292dcb3-cdad-4918-ae2e-de78b1f447cb)
+
+As the dataset contained 7043 rows of data, each collumn had to be searched for "null value" or blanks as to understand whether errors could occur when performing trend analysis.
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/6b13a0bb-3245-4fe3-af90-8194acccb9d3)
+
+During this process, 11 rows were found to be incomplete data sets as "Total Charges" did not return values for customers whos tenure was <1. This is due to Total Charge being = to monthly charge **x** tenure. These results were then ommited from the set as Churn always resulted in No as they were considered "new customers", as the focus of this work is focused on exploring the relationship churn with existing or loyal customers (tenure ≥ 1).
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/38999458-66ee-481b-9ee4-20f5b65c3098)
+
 
 
 **Bibliography**:
