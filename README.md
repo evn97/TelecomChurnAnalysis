@@ -6,6 +6,11 @@ The dataset includes 7043 examples and 21 factors, which applied machine learnin
 
 The dataset is available at: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
+**Executive Summary**:
+Identifying a customers risk of churn is paramount for any business since it enables proactive measures to retain clients and profit. Churn, the rate at which customers discontinue their association with with a company, poses a substantial threat to revenue and market stability. By developing extensive and unique analytical tools accompanied with customer relationship management processes a business can identify early signs of dissatisfaction and deploy apt intervention. Reichheld and Schefter (2000) identified this process whereby customer retention heavily influences long-term profitability and emphasized the financial impact of preventing churn. Moreover, the cost for acquisitioning new customers exceeds that of retaining existing ones (Blattberg et al, 2001). Keeping with the theme of Telecommunication, often customer fees such as: equipment, postage & packaging, line installation or "takeover" fees and administrative charges are generated when acquiring a new customer. Not to mention product incentives that can include gifts, vouchers for the customer at the cost of the business. It is already clear that understanding churn  contributes to financial stability, but by employing unique approaches to customers at risk of churn a business fosters a sense of brand loyalty and allows for them to fortify their market position and remain competitive within the market space.
+
+**Data Overview**:
+
 **Dataset Features**
 * **customerID**: A unique number that represents an inidividual customer.
 * **gender**: If the customer is either male or female (option limited)
@@ -26,3 +31,10 @@ The dataset is available at: https://www.kaggle.com/datasets/blastchar/telco-cus
 * **Payment Method**: How the customers payents are made (Electronic check, Mailed check, Bank transfer (automatic), Credit Card (automatic))
 * **Monthly Charges**: The recurring charges for the customer each month
 * **Churn Label**: If the customer churned or not (Yes or No)
+
+**Data Processing**
+WA_Fn-UseC_-Telco-Customer-Churn.csv was 
+
+**Bibliography**:
+Reicheld, F. and Schefter, P. (2000) E-loyalty: Your secret weapon on the web, Harvard Business Review. Available at: https://hbr.org/2000/07/e-loyalty-your-secret-weapon-on-the-web (Accessed: 10 January 2024). 
+Blattberg, R.C., Getz, G. and Thomas, J.S. (2001) Customer equity: Building and managing relationships as valuable assets. Boston, Mass: Harvard Business School Press. 
