@@ -40,6 +40,7 @@ The above .csv was then formatted into a brief table to spot for incosnsitencies
 ![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/7292dcb3-cdad-4918-ae2e-de78b1f447cb)
 
 As the dataset contained 7043 rows of data, each collumn had to be searched for "null value" or blanks as to understand whether errors could occur when performing trend analysis.
+
 ![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/6b13a0bb-3245-4fe3-af90-8194acccb9d3)
 
 During this process, 11 rows were found to be incomplete data sets as "Total Charges" did not return values for customers whos tenure was <1. This is due to Total Charge being = to monthly charge **x** tenure. These results were then ommited from the set as Churn always resulted in No as they were considered "new customers", as the focus of this work is focused on exploring the relationship churn with existing or loyal customers (tenure ≥ 1).
