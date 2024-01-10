@@ -43,11 +43,41 @@ As the dataset contained 7043 rows of data, each collumn had to be searched for 
 
 ![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/6b13a0bb-3245-4fe3-af90-8194acccb9d3)
 
-During this process, 11 rows were found to be incomplete data sets as "Total Charges" did not return values for customers whos tenure was <1. This is due to Total Charge being = to monthly charge **x** tenure. These results were then ommited from the set as Churn always resulted in No as they were considered "new customers", as the focus of this work is focused on exploring the relationship churn with existing or loyal customers (tenure ≥ 1).
+During this process, 11 rows were found to be incomplete data sets as "Total Charges" did not return values for customers whos tenure was <1. This is due to Total Charge being = to monthly charge **x** tenure. These results were then ommited from the set as Churn always resulted in No as they were considered "new customers", as the focus of this work is focused on exploring the relationship churn with existing or loyal customers (tenure ≥ 1). Leading to the total remaining examples being 7032. 
 ![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/38999458-66ee-481b-9ee4-20f5b65c3098)
 
+The results were then aggrigated into understand the range of customer tenure using whatifs formulas as max value for tenure is 72 months, then plotted as a graph to understand how proportunate tenure was.
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/42de3a21-0fa1-4dcb-b161-178b1a941d8b)
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/32f8c96d-fd9a-47d2-9a8c-0cc105790f19)
+
+Then to understand the average tenure of a customer who had churned vs a non-churned customer the following formulas were implemented:
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=Yes",'WA_Fn-UseC_-Telco-Customer-Churn'!F2:F7033)
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=No",'WA_Fn-UseC_-Telco-Customer-Churn'!F2:F7033)
+This resulted in an average of 17.97 tenure for a churned customer vs an average of 37.65 for non-churned customer.
+
+Then to understand the average customer charges vs churn label the previous approach was implemented and adapted using the following formula:
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=Yes",'WA_Fn-UseC_-Telco-Customer-Churn'!S2:S7033)
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=No",'WA_Fn-UseC_-Telco-Customer-Churn'!S2:S7033)
+This resulted in an average of 74.44 monthly charge for a churned customer vs an average of 61.27 for a non-churned customer.
+
+Then to understand the average total charges vs churn label: 
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=Yes",'WA_Fn-UseC_-Telco-Customer-Churn'!T2:T7033)
+=AVERAGEIF('WA_Fn-UseC_-Telco-Customer-Churn'!U2:U7033,"=No",'WA_Fn-UseC_-Telco-Customer-Churn'!T2:T7033)
+This resulted in an average of 1531.80 Total charge for a churned customer vs an average of 2555.34 for a non-churned customer.
+
+**Results Interpretation**
+
+From the above analysis the following conclusions can be drawn from the dataset:
+
+1. **Tenure**:
+   The dataset indicated that customers who have been with the company longer are less likely to churn, as shown by the lower average tenure for churned customers.
+2. **Monthly Charges**
+   The dataset indicates that customers who have a higher monthly charge are more likely to churn.
+3. **Total Charges**
+   The data indicates that customers who've accumulated a higher total charge are less likely to churn.
 
 
 **Bibliography**:
 Reicheld, F. and Schefter, P. (2000) E-loyalty: Your secret weapon on the web, Harvard Business Review. Available at: https://hbr.org/2000/07/e-loyalty-your-secret-weapon-on-the-web (Accessed: 10 January 2024). 
+
 Blattberg, R.C., Getz, G. and Thomas, J.S. (2001) Customer equity: Building and managing relationships as valuable assets. Boston, Mass: Harvard Business School Press. 
