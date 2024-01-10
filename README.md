@@ -76,8 +76,122 @@ From the above analysis the following conclusions can be drawn from the dataset:
 3. **Total Charges**
    The data indicates that customers who've accumulated a higher total charge are less likely to churn.
 
+Now that the above interpretations have been drawn it is important to understand whether any factors in the data set such as: gender, dependents, phone service etc... could influence churn. Therefore a catagorical analysis was performed with the results show below:
+
+**Gender**
+Male: 2549 Churn = No, 939 Churn = Yes
+Female: 2625 Churn = No, 930 Churn = Yes
+
+**Senior Citizen**
+No: 4508 Churn = No, 1393 Churn = Yes
+Yes: 666 Churn = No, 476 Churn = Yes
+
+**Partner**
+No: 2441 Churn = No, 1200 Churn = Yes
+Yes: 2733 Churn = No, 669 Churn = Yes
+
+**Dependents**
+No: 3653 Churn = No, 1763 Churn = Yes
+Yes: 1521 Churn = No, 106 Churn = Yes
+
+**Phone Service**
+No: 4662 Churn = No, 1699 Churn = Yes
+Yes: 512 Churn = No, 170 Churn = Yes
+
+**Multiple Lines**
+No: 2541 Churn = No, 849 Churn = Yes
+Yes: 512 Churn = No, 170 Churn = Yes
+No Phone Service: 2121 Churn = No, 850 churn = Yes
+
+**Internet Service**
+DSL: 1962 Churn = No, 459 Churn = Yes
+Fiber Optic: 1799 Churn = No, 1297 Churn = Yes
+No: 1413 Churn = No, 113 Churn = Yes
+
+**Online Security**
+Yes: 2037 Churn = No, 1461 Churn = Yes
+No: 1413 Churn = NO, 113 Churn = Yes
+No internet Service: 1724 Churn = No, 295 Churn = Yes
+
+**Online Backup**
+Yes: 1855 Churn = No, 1233 Churn = Yes
+No: 1413 Churn = NO, 113 Churn = Yes
+No Internet Service: 1906 Churn = No, 523 Churn = Yes
+
+**Device Protection**
+Yes: 1413 Churn = No, 113 Churn = Yes
+No: 1884 Churn = No, 1211 Churn = Yes
+No Internet Service: 1877 Churn = No, 545 Churn = Yes
+
+**Tech Support**
+Yes: 1413 Churn = No, 113 Churn = Yes
+No: 2027 Churn = No, 1446 Churn = Yes
+No Internet Service: 1734 Churn = No, 310 Churn = Yes
+
+**Streaming TV**
+Yes: 1413 Churn = No, 113 Churn = Yes
+No: 1868 Churn = No, 942 Churn = Yes
+No Internet Service: 1893 Churn = NO, 814 Churn = Yes
+
+**Streaming Movies**
+Yes: 1413 Churn = No, 113 Churn = Yes
+No: 1847 Chrun = No, 938 Churn = Yes
+No Internet Service: 1914 Churn = no, 818 Churn = Yes
+
+**Contract**
+Month-to-month: 2220 Churn = No, 1655 Churn = Yes
+Two Year: 1307 Churn = No, 166 Churn = No
+One Year: 1647 Churn = No, 48 Churn = Yes
+
+**Payment Method**:
+Mailed Check: 1286 Churn = No, 258 Churn = Yes
+Electronic Check: 1290 Churn = No, 232 Churn = Yes
+Bank Transfer (automatic): 1294 Churn = No, 1071 Churn = Yes
+Credit card (automatic): 1304 Churn = No, 308 Churn = Yes
+
+The above data was tracked as to identify any patterns that could influence churn and enable for targetted stratergies amongst data retention.
+
+To understand the initial "churn rate" I totalled and converted the sums into a % using the formula below:
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/0ad76681-d154-494d-9068-188125bfba27)
+
+No = 73.46%, Yes = 26.54% therefore churn "rate" is measured at 26.54%
+
+Afterwards, I wanted to test 3 promising hypothesis': 
+
+1. Phone Service Impact Churn:
+   Null: there is no significant relationship between phone service and churn
+   Alternative: there is a significatn relationship between phone service and churn.
+   
+3. Contract Type Imapct Churn:
+   Null: there is no significant relationship between contract type and churn
+   Alternative: there is a significatn relationship between contract type and churn.
+   
+5. Seniority affects churn:
+   Null: there is no significant relationship between contract type and churn
+   Alternative: there is a significatn relationship between contract type and churn.
+
+To test the above I implemented a Chi Square Test: χ2=∑ni=1(Oi−Ei)2Ei, Results below:
+![image](https://github.com/evn97/TelecomChurnAnalysis/assets/144129868/374c8f72-0fa9-4358-8176-1a9408ffe8dd)
+
+**Interpretation**:
+Hypothesis 1 (Phone Service Impacts Churn) as the p-value is 0.34 which is greater than the significance level of 0 we fail to reject the null hypothesis. This suggests that there is no significance in Phone Service Impacting Churn.
+Hypothesis 2 (Contract Type Impacts Churn) as the p-value is 0 which is less than the significance level of 0 the null hypothesis fails indicating a relationship between Contract Type and Churn risk in this dataset.
+Hypothesis 3 (Seniority Impacts Churn) as the p-value is 0 which is less than the significance level of 0 the null hypothesis fails indicating a relationship between Seniority and Churn risk in this dataset.
+
+**Suggestions for a next step?**:
+Increased customer diversity to allow for additional segmentation using defining characteristics such as: race and religion
+Machine Learning Model: By implementing logistic regression we can help to build predictive models for churn and therefore better help businesses prevent it.
+
+**Data Quality**
+Overall the source quality for the data seems very high, with a comprehensive set of variables and attributes for analysing churn. It includes key information such as demographic and services making it appropriate for a wide range of analytical tasks. However, a more thorough cleaning process must be undertaken prior to further analysis.
+
+**Conclusion**:
+In conclusion, while identifying and mitigating churn risks is paramount for businesses, the ever-evolving landscape calls for continuous improvement and innovation. To deepen our understanding and refine our strategies, there is a compelling need for further analysis of churn dynamics. Verbeke et al (2013) has demonstrated the effectiveness of machine based learning in churn prediction models in ehancing the precision of risk identfiication. Furthermore, multidimensional approaches such as this allow for businesses to navigate the complexities of churn and adapt better for the future.
+
 
 **Bibliography**:
 Reicheld, F. and Schefter, P. (2000) E-loyalty: Your secret weapon on the web, Harvard Business Review. Available at: https://hbr.org/2000/07/e-loyalty-your-secret-weapon-on-the-web (Accessed: 10 January 2024). 
 
 Blattberg, R.C., Getz, G. and Thomas, J.S. (2001) Customer equity: Building and managing relationships as valuable assets. Boston, Mass: Harvard Business School Press. 
+
+Verbeke, W. et al. (2013) Credence Quality Coordination and Consumers’ willingness-to-pay for ... Available at: https://www.researchgate.net/publication/236923110_Credence_quality_coordination_and_consumers’_willingness-to-pay_for_certified_halal_labelled_meat (Accessed: 10 January 2024). 
